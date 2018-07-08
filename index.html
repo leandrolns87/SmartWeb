@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Leandro</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!--link rel="stylesheet" href="fontawesome-stars.css"-->
+    
+  </head>
+  
+  <body>
+
+  <!-- TOPO MENU -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Trabalho Leandro</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Página envio dados API<span class="sr-only">(current)</span></a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <!-- FINAL TOPO MENU -->
+
+  <!-- FORMULÁRIO -->  
+    <div class="container-fluid">
+      <div class="row">
+        <form class="form-horizontal" method="post" id="ajax_add">
+
+          <!-- CAMPO DIA -->
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Dia</label>
+            <div class="col-sm-6">
+                
+              <select name="day" class="form-control">
+                <option value="0">Segunda-feira</option>
+                <option value="1">Terça-feira</option>
+                <option value="2">Quarta-feira</option>
+                <option value="3">Quinta-feira</option> 
+                <option value="4">Sexta-feira</option> 
+              </select>
+            </div>
+          </div>
+          <!-- FINAL CAMPO DIA -->
+
+        <!-- CAMPO HORÁRIO -->
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">Horário</label>
+          <div class="col-sm-6">
+              <select name="day" class="form-control">
+                  <option value="0">8h</option>
+                  <option value="1">9h</option>
+                  <option value="2">10h</option>
+                  <option value="3">11h</option> 
+                  <option value="4">12h</option> 
+                  <option value="4">13h</option> 
+                  <option value="4">14h</option> 
+                  <option value="4">15h</option> 
+                  <option value="4">16h</option> 
+                  <option value="4">17h</option> 
+                  <option value="4">18h</option> 
+                  <option value="4">19h</option> 
+                  <option value="4">20h</option> 
+                  <option value="4">21h</option> 
+                  <option value="4">22h</option> 
+                </select>
+          </div>
+        </div>
+         <!-- FINAL CAMPO HORÁRIO -->
+
+         <!-- CAMPO ILUMINAÇÃO -->        
+         <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">Iluminação</label>
+          <div class="col-sm-6">
+            <input type="number" name="lightRating" id="rating1" class="rating" data-clearable="remove"/>
+
+          </div>
+        </div>
+        <!-- FINAL CAMPO ILUMINAÇÃO -->
+
+          <!-- CAMPO LOTAÇÃO -->
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Lotação</label>
+            <div class="col-sm-6">
+                <input type="number" name="crowdRating" id="crowdRating" class="rating" data-clearable="remove"/>
+            </div>
+          </div>
+          <!-- FINAL CAMPO LOTAÇÃO -->
+        
+        <!-- CAMPO RUÍDO -->
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">Barulho</label> <!--//Ruído-->
+          <div class="col-sm-6">
+              <input type="number" name="noiseRating" id="noiseRating" class="rating" data-clearable="remove"/>
+          </div>
+        </div>
+        <!-- FINAL CAMPO RUÍDO -->
+
+        <!-- CAMPO TEMPERATURA -->
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Temperatura</label>
+            <div class="col-sm-6">
+              <input type="number" name="temperatureRating" id="temperatureRating" class="rating" data-clearable="remove"/>
+            </div>
+          </div>
+          <!-- FINAL CAMPO TEMPERATURA -->
+
+        <!-- CAMPO ID -->
+        <!--div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">Id</label>
+          <div class="col-sm-6">
+            <input type="number" name="userId" id="userId" class="rating" data-clearable="remove" value="5b20648f0f5fad6490fae559"/>
+            </div>
+        </div>
+        <!-- FINAL CAMPO ID -->
+
+        <!-- ... OUTROS CAMPOS 
+          http://getbootstrap.com/docs/3.3/css/#forms - Componentes Bootstrap
+        -->
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button class="btn btn-success" id="enviar">Confirmar Envio</button>
+          </div>
+        </div>
+        </form>
+
+      </div>
+    </div>
+<!-- FINAL FORMULÁRIO -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="build/bootstrap-rating-input.min.js"></script>
+
+    <script>
+      $(function(){
+        $('input').on('change', function(){
+          //alert("Changed: " + $(this).val())
+        });
+      });
+    </script>
+
+
+
+  </body>
+</html>
+
+<script type="text/javascript">
+  // jquery
+  //Ao clicar em enviar 
+  $('#enviar').click(function(e){
+    
+    e.preventDefault(); // não faz refresh
+
+      $.ajax({
+             //como get ele lista e como post envia
+             //Metodo Post
+             type: 'POST',
+             dataType: "json",    // default é json
+
+             crossDomain:true,
+
+             //URL API
+             url: "https://reclab-mate84.herokuapp.com/rating",         
+             
+             // fazer referncia para uma transação externa
+             headers:{
+               //"accept": "application/json",
+               
+               'Access-Control-Allow-Origin':'https://reclab-mate84.herokuapp.com/rating'
+             },
+
+             //Pega os campos do form
+             //data: $('#ajax_add').serialize(),  // data são os campos que pego como parametro
+             data: {"noiseRating":5,"crowdRating":5,"day":3,"schedule":8,"userId":"5b20648f0f5fad6490fae559","temperatureRating":5,"lightRating":5},
+             
+             success : function(txt){
+              //apos o cadastro limpa o campo do form
+              $("#perfil").val("");
+              //mensagem de sucesso
+              alert('DADOS ENVIADO COM SUCESSO !');
+       },
+        // caso tenha erro
+        error: function (request, status, error) {
+              //alert(error);
+              console.log (request.responseText);
+              console.log (status);
+              console.log (error);
+              //alert(request.responseText);
+              //alert('NÃO CADASTRADO!');
+              //window.back();
+              
+         }
+             
+         });
+
+         return false;
+
+  });
+
+</script>
